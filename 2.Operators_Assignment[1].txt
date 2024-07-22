@@ -1,0 +1,230 @@
+1) Write a program to add 8 to the number 2345 and then divide it by 3. Now, the modulus of the quotient is taken with 5 and then multiply the  resultant value by 5. Display the final result.(Using Assignment Operators)
+
+package ass2operator;
+
+public class question4 {
+	public static void main(String[] args) {
+        int number = 2345;
+        int result = (((number + 8) / 3) % 5) * 5;
+        System.out.println("The final result is: " + result);
+	}
+
+}
+
+2) Greatest of four numbers using nested ternary operator
+package ass2operator;
+
+public class question5 {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
+        int num3 = 15;
+        int num4 = 30;
+
+        int max = (num1 > num2)
+                ? ((num1 > num3)
+                    ? ((num1 > num4) ? num1 : num4)
+                    : ((num3 > num4) ? num3 : num4))
+                : ((num2 > num3)
+                    ? ((num2 > num4) ? num2 : num4)
+                    : ((num3 > num4) ? num3 : num4));
+
+        System.out.println("The greatest number is: " + max);
+    }
+}
+
+
+3) Consider the following code snippet:
+   int i = 10;
+   int n = i++%5;
+  i) What are the values of i and n after the code is executed?
+  ii)What are the final values of i and n if instead of using the postfix increment operator (i++), you use the prefix version (++i))?
+
+4) Write a Java program to print the sum, multiply, subtract, divide and remainder of two numbers
+package ass2operator;
+
+import java.util.Scanner;
+
+public class question1 {
+    public static void main(String[] args) {
+        Scanner result = new Scanner(System.in);
+        System.out.println("Enter the value of A:");
+        int a = result.nextInt();
+        System.out.println("Enter the value of B:");
+        int b = result.nextInt();
+        result.close();
+
+        arth(a, b);
+    }
+
+    public static void arth(int a, int b) {
+        System.out.println("The sum of a + b: " + (a + b));
+        System.out.println("The sub of a - b: " + (a - b));
+        System.out.println("The mul of a * b: " + (a * b));
+        System.out.println("The quo of a / b: " + (a / b));
+        System.out.println("The rem of a % b: " + (a % b));
+    }
+}
+
+
+5) Write a Java program that takes five numbers as input to calculate and print the average of the numbers
+package ass2operator;
+
+import java.util.Scanner;
+
+public class question2 {
+    public static void main(String[] args) {
+        Scanner result = new Scanner(System.in);
+        System.out.println("Enter the value 1:");
+        int a = result.nextInt();
+        System.out.println("Enter the value 2:");
+        int b = result.nextInt();
+        System.out.println("Enter the value 3:");
+        int c = result.nextInt();
+        System.out.println("Enter the value 4:");
+        int d = result.nextInt();
+        System.out.println("Enter the value 5:");
+        int e = result.nextInt();
+        result.close();
+
+        avg(a, b, c, d, e);
+    }
+
+    public static void avg(int a, int b, int c, int d, int e) {
+        int average = (a + b + c + d + e) / 5;
+        System.out.println("The average is: " + average);
+    }
+}
+
+
+6) Assign values of variables 'a' and 'b' as 55 and 70 respectively and then check if both the conditions 'a < 50' and 'a < b' are true
+package ass2operator;
+
+public class question3 {
+    int a = 55;
+    int b = 70;
+    
+    public static void main(String[] args) {
+        question3 obj = new question3();
+        compare(obj.a, obj.b);
+    }
+    
+    public static boolean compare(int a, int b) {
+        boolean result = (a < 50) && (a < b);
+        System.out.println(result);
+        return result;
+    }
+}
+
+7) What is the output of the following code snippet & Explain? 
+       int x = 10;   
+       int y = 20;   
+       int z = x++ + ++y;   
+       System.out.println(z);  
+
+8)  Write a Java program to calculate the area of a circle given its radius? 
+package ass2operator;
+
+public class Question6 {
+    public static void main(String[] args) {
+        double PI = 3.14;
+        int r = 23;
+        double result1 = area(PI, r);
+        System.out.println("Area of the circle: " + result1);
+    }
+
+    public static double area(double PI, int r) {
+        double area_of_circle = PI * r * r;
+        return area_of_circle;
+    }
+}
+
+9)  Write a Java program to compare two integers using relational operators and Write the results? 
+package ass2operator;
+
+public class Question7 {
+    public static void main(String[] args) {
+        int a = 50;
+        int b = 60;
+
+        boolean isEqual = a == b;
+        boolean isNotEqual = a != b;
+        boolean isGreater = a > b;
+        boolean isLess = a < b;
+        boolean isGreaterOrEqual = a >= b;
+        boolean isLessOrEqual = a <= b;
+
+        System.out.println("a == b: " + isEqual);
+        System.out.println("a != b: " + isNotEqual);
+        System.out.println("a > b: " + isGreater);
+        System.out.println("a < b: " + isLess);
+        System.out.println("a >= b: " + isGreaterOrEqual);
+        System.out.println("a <= b: " + isLessOrEqual);
+    }
+}
+
+10) Write a Java program to compare two characters and print the results? 
+package ass2operator;
+
+public class Question8 {
+    public static void main(String[] args) {
+        char char1 = 'A';
+        char char2 = 'B';
+
+        boolean isEqual = char1 == char2;
+        boolean isNotEqual = char1 != char2;
+        boolean isGreater = char1 > char2;
+        boolean isLess = char1 < char2;
+
+        System.out.println("char1 == char2: " + isEqual);
+        System.out.println("char1 != char2: " + isNotEqual);
+        System.out.println("char1 > char2: " + isGreater);
+        System.out.println("char1 < char2: " + isLess);
+    }
+}
+
+11) Write a Java program to check if a given year is a leap year using the ternary operator? 
+package ass2operator;
+
+public class Question9 {
+    public static void main(String[] args) {
+        int year = 2024; 
+
+       
+        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+
+        
+        System.out.println(year + " is a leap year: " + (isLeapYear ? "Yes" : "No"));
+    }
+}
+
+
+12) Write a Java program to determine the sign of a given number (positive, negative, or zero) using the ternary operator?
+package ass2operator;
+
+public class Question9 {
+    public static void main(String[] args) {
+        int number = -15; 
+        String sign = (number > 0) ? "Positive" : (number < 0) ? "Negative" : "Zero";
+        System.out.println("The sign of " + number + " is: " + sign);
+    }
+}
+
+
+
+13) Write a Java function to swap two variables without using a third variable?
+package ass2operator;
+
+public class swapping {
+    public static void main(String[] args) {
+        swap(10, 20);
+    }
+
+    public static void swap(int a, int b) {
+         a = a + b;
+         b = a - b;
+         a = a - b;
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
